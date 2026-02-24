@@ -23,3 +23,12 @@ function reverse(str) {
 
 	return reversed;
 }
+
+// modern AI solution:
+function reverse(str) {
+	// use spread operator b/c it handles surrogate pairs properly. That means:
+	// Most common characters = 1 code unit (16 bits)
+	// Some characters (like emojis, certain symbols, rare Asian characters) = 2 code units
+	// Those 2 code units together are called a surrogate pair.
+	return [...str].reverse().join('');
+}
