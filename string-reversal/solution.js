@@ -12,3 +12,14 @@
 function reverse(str) {
 	return str.split('').reverse().join('');
 }
+
+// alt solution 1:
+function reverse(str) {
+	let reversed = '';
+
+	for (let char of str) {
+		reversed = char + reversed;
+	}
+
+	return reversed;
+}
