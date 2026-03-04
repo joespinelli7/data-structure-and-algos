@@ -32,3 +32,11 @@ function reverse(str) {
 	// Those 2 code units together are called a surrogate pair.
 	return [...str].reverse().join('');
 }
+
+// alt solution 2:
+function reverse(str) {
+	// reduce is used to take all values of an array and condense them into a single value.
+	return str.split('').reduce((reversed, character) => {
+		return character + reversed;
+	}, '');
+}
