@@ -36,7 +36,5 @@ function reverse(str) {
 // alt solution 2:
 function reverse(str) {
 	// reduce is used to take all values of an array and condense them into a single value.
-	return str.split('').reduce((reversed, character) => {
-		return character + reversed;
-	}, '');
+	return str.split('').reduce((rev, char) => char + rev, '');
 }
