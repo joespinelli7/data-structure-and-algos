@@ -27,8 +27,14 @@ function palindrome(str) {
 
 // alt solution 1:
 function palindrome(str) {
-	const initialStr = str;
-	const revStr = initialStr.split('').reverse().join('');
+	// using every function to check, it iterates over each value in an array and compares it to a specified value. If any value in array returns false,
+	// the entire array returns false.
+	return str.split('').every((char, i) => {
+		return char === str[str.length - i - 1];
+	})
+}
 
-	return initialStr === revStr;
+// modern AI solution:
+function palindrome(str) {
+
 }
