@@ -15,3 +15,14 @@ function palindrome(str) {
 	return initialStr === revStr;
 }
 
+// my solution 2:
+function palindrome(str) {
+	if (typeof(str) == 'string') {
+		const initialStr = str;
+		const revStr = initialStr.split('').reverse().join('');
+
+		return initialStr === revStr;
+	} else {
+		alert("Please input strings only!")
+	}
+}
