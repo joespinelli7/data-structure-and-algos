@@ -9,20 +9,26 @@
 
 // my solution:
 function palindrome(str) {
-	const initialStr = str;
 	const revStr = initialStr.split('').reverse().join('');
 
-	return initialStr === revStr;
+	return str === revStr;
 }
 
 // my solution 2:
 function palindrome(str) {
 	if (typeof(str) == 'string') {
-		const initialStr = str;
 		const revStr = initialStr.split('').reverse().join('');
 
-		return initialStr === revStr;
+		return str === revStr;
 	} else {
 		alert("Please input strings only!")
 	}
+}
+
+// alt solution 1:
+function palindrome(str) {
+	const initialStr = str;
+	const revStr = initialStr.split('').reverse().join('');
+
+	return initialStr === revStr;
 }
