@@ -35,6 +35,7 @@ function palindrome(str) {
 }
 
 // modern AI solution:
-function palindrome(str) {
-
-}
+const palindrome = (str) => {
+	// Leverage spread syntax to easily reverse the string
+	return [...str].reverse().join('') === str;
+};
