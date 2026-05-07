@@ -24,3 +24,12 @@ function reverseInt(n) {
 
 	return parseInt(reversed) * Math.sign(n);
 }
+
+// modern AI solution:
+// Modern style prefers arrow functions assigned to const, unless you have a good reason for hoisting or legacy compatibility.
+const reverseInt = (n) => {
+	const sign = Math.sign(n);
+	// Convert to string, split, reverse, join; handle negatives
+	const reversedStr = Math.abs(n).toString().split('').reverse().join('');
+	return sign * Number(reversedStr);
+};
