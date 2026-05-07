@@ -9,5 +9,11 @@
 // reverseInt(-90) === -9;
 
 function reverseInt(n) {
+	let revNum = parseInt(n.toString().split('').reverse().join(''));
 
+	if (n >= 0) {
+		return revNum;
+	} else {
+		return -revNum
+	}
 }
