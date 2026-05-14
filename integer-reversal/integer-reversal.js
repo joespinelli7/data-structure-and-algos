@@ -8,6 +8,7 @@
 // reverseInt(-15) === -51;
 // reverseInt(-90) === -9;
 
+// my solution:
 function reverseInt(n) {
 	const revNum = parseInt(n.toString().split('').reverse().join(''));
 
