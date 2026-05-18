@@ -50,3 +50,26 @@ function maxChar(str) {
 
 	return maxChar;
 }
+
+// modern AI solution:
+// Modern style prefers arrow functions assigned to const, unless you have a good reason for hoisting or legacy compatibility.
+const maxChar = (str) => {
+	const freqMap = new Map();
+
+	// Build frequency map
+	for (const char of str) {
+		freqMap.set(char, (freqMap.get(char) ?? 0) + 1);
+	}
+
+	// Find the max
+	let max = 0;
+	let result = '';
+	for (const [char, count] of freqMap) {
+		if (count > max) {
+			max = count;
+			result = char;
+		}
+	}
+
+	return result;
+};
